@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+	<html lang="es">
+		<head>
+			<title>Restaurante New York City - Contacto</title>
+ 			<meta charset="utf-8" />
+ 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 			<link rel="stylesheet" type="text/css" href="css/estilo.css">
+ 			<link rel="stylesheet" type="text/css" href="css/modales.css">
+ 			<link rel="stylesheet" type="text/css" href="css/log.css">
+ 			<link rel="stylesheet" type="text/css" href="css/slider.css">
+ 			<link rel="stylesheet" href="css/alertify.core.css" />
+			<link rel="stylesheet" href="css/alertify.default.css" />
+ 			<script type="text/javascript" src="js/registro.js"></script>
+ 		 	<script type="text/javascript" src="js/reservar.js"></script>
+ 			<script type="text/javascript" src="js/Sugerencias.js"></script>
+ 			<script type="text/javascript" src="js/alertify.js"></script>
+		</head>
+		
+		<body>
+			<header>
+				<div id="logo">
+ 					<a href="index.html"><img src="img/logo.png" alt="Restaurante New York City"/></a>
+ 				</div>	
+			</header>
+				
+			<div class="inner">
+				<div class="mast">
+					<ul class="nav">
+						<li class="first"><a href="index.html"><i>Inicio</i></a></li>
+ 						<li><a href="Platillos.html"><i>Platillos Del</i> Restaurante</a></li>
+ 						<li><a href="Instalaciones.html"><i>Nuestras</i><br> Instalaciones</a></li>
+ 						<li><a href="#modal2"><i>Registrar</i></a></li>
+ 						<li><a href="#modal1"><i>Ingresar</i></a></li>
+ 						<li><a href="Ordenar.html"><i>Ordenar</i></a></li>
+ 						<li onclick="VerificarRegistro()"><a ><i>Reservar en</i><br> Linea</a></li>
+ 						<li><a href="Contacto.html"><i>Contactenos</i></a></li>
+						<li><a href="Creadores.html"><i>Creadores</i></a></li>
+						<li><a href="#modal3"><i>Sugerencias</i></a></li>
+
+						<script type="text/javascript">
+							logueado = localStorage.getItem("logueado");
+                			if(logueado != ""){
+                				document.write("<li class='last' onclick='Salir()' id='salir'><a href=''><i>Salir</i></a></li>");
+                			}
+              			</script>
+					</ul>
+				</div>
+			</div>
+					
+			<div class="section intro">
+				<div>
+					<h2>Creadores</h2>
+							
+				</div>
+			</div>
+
+			<div id="modal1" class="modal">
+    			<div class="modalcaja rotar">
+        			<a href="#cerrar" title="Close" class="cerrar">X</a>
+        			<div class="login-caja">
+        				<form action="" onsubmit="login(); return false">
+    						<h1>Login</h1><br>
+							<input type="text" placeholder="Usuario" id="user" required>
+							<input type="password" placeholder="Contraseña" id="password" required pattern=".{8,}" title="la contraseña debe tener al menos 8 caracteres">
+							<input type="submit" class="login login-boton" value="Login">
+  						</form>
+  								
+  						<div class="login-ayuda">
+    						<a href="#modal2">Registrarse</a>
+  						</div>
+					</div>
+    			</div>
+			</div>
+
+			<div id="modal2" class="modal">
+    			<div class="modalcaja rotar">
+        			<a href="#cerrar" title="Close" class="cerrar">X</a>
+        			<div class="login-caja" id="caja">
+                        <form action="" onsubmit="registrar(); return false">
+                          	<h1>Registrarse</h1><br>
+		                    <input type="text" placeholder="Nombre" id="nombre" required pattern="[a-zA-Z]*" title="solo se permiten letras">
+		                    <input type="text" placeholder="Apellido" id="apellido" required pattern="[a-zA-Z]*" title="solo se permiten letras">
+		                    <input type="text" placeholder="Usuario" id="usuario" required>
+		                    <input type="email" placeholder="Correo Electronico" id="correo" required title="Ingrese formato de formna correcta: mail@example.com">
+		                    <input type="password" placeholder="Contraseña" id="contraseña" required pattern=".{8,}" title="la contraseña debe tener al menos 8 caracteres">
+		                    <input type="password" placeholder="Confirmar Contraseña" id="confirmar" required pattern=".{8,}" title="la contraseña debe tener al menos 8 caracteres">
+		                    <input type="submit" class="login login-boton" value="Registrarse" id="registrarse" >
+	                    </form>
+                    </div>
+    			</div>
+			</div>
+
+			<div id="modal3" class="modal">
+				<div class="modalcaja rotar">
+					<a href="#cerrar" title="Close" class="cerrar">X</a>
+					<div class="login-caja" id="caja">
+						<form action="" onsubmit="sugerencias(); return false">
+							<h1>Sugerencias:</h1><br>
+			                <input type="text" placeholder="Nombre" id="name" required pattern="[a-zA-Z]*" title="solo se permiten letras">
+			                <input type="text" placeholder="Apellido" id="ape" required pattern="[a-zA-Z]*" title="solo se permiten letras">
+			                <input type="text" placeholder="Pais" id="pais" required pattern="[a-zA-Z]*" title="solo se permiten letras">
+			                <input type="email" placeholder="Correo Electronico" id="mail" title="Ingrese formato de formna correcta: mail@example.com">
+			                <input type="textarea" placeholder="Sugerencia" id="sugerencia">
+			                <input type="submit" class="login login-boton" value="Enviar Sugerencia">
+			            </form>
+	                </div>
+	            </div>
+	        </div>
+					
+			<div class="section main">
+				<ol>
+					<li id="f-holmes" class="figure">
+						<a>
+							<img src="img/Creadores/1.jpg">
+							<span class="figcaption"><b>Marvin Trejo</b></span>
+						</a>
+					</li>
+							
+					<li id="f-watson" class="figure">
+						<a>
+							<img src="img/Creadores/2.jpg">
+							<span class="figcaption"><b>Jairo Osorio</b></span>
+						</a>
+					</li>
+							
+					<li id="f-mycroft" class="figure">
+						<a>
+							<img src="img/Creadores/3.jpg">
+							<span class="figcaption"><b>Lucia Carranza</b></span>
+						</a>
+					</li>
+							
+					<li id="f-moriarty" class="figure">
+						<a>
+							<img src="img/Creadores/4.jpg" alt="" />
+							<span class="figcaption"><b>Fernando Orellana</b></span>
+						</a>
+					</li>
+				</ol>
+			</div>
+				
+			<div class="footer">
+				<footer>
+					<h3>Redes Sociales</h3> 
+					<a href=""><img src="img/fb.png"  width="40px" height="40px"></a>  
+					<a href=""><img src="img/tw.png" width="40px" height="40px"></a>
+					<a href=""><img src="img/insta.jpg"  width="40px" height="40px"></a>
+				
+					<div id="copyright">
+        				&copy; Copyright 2015 | Restaurante New York City | All Rights Reserved
+      				</div>
+          		</footer>
+			</div>		
+		</body>
+	</html>
